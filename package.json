@@ -1,0 +1,19 @@
+{
+  "name": "jstraining",
+  "version": "1.0.0",
+  "description": "This is a training and tutorial repository",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razazaidisd/JStraining.git"
+  },
+  "author": "Syed Iqrar Raza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razazaidisd/JStraining/issues"
+  },
+  "homepage": "https://github.com/razazaidisd/JStraining#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
