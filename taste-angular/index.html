@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taste Angular JS </title>
+</head>
+<body ng-app="taste-angular">
+	<h1> Angular JS - First Bite</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta labore, nostrum cumque, molestiae aliquid asperiores. Provident nostrum temporibus illo natus excepturi. Illo id, omnis suscipit laborum, ex nobis repellat error.</p>
+
+	<div ng-controller="AppController as vm">
+		<ul>
+			<li ng-repeat="user in vm.users">
+				{{user.firstName}} {{user.lastName}}
+			</li>
+		</ul>
+
+	</div>
+
+</body>
+	<!--Vendor Scripts start-->
+	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<!--Vendor Scripts end-->
+
+	<!--App Scripts-->
+	<script type="text/javascript" src="app.module.js"></script>
+	<script type="text/javascript" src="app.controller.js"></script>
+	
+	<!--App Scripts end-->
+
+
+</html>
