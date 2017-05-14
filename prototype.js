@@ -37,13 +37,14 @@ var usersArr = [
 
 var getUsersFullNames = function (){
   return this.map(
-    function(obj, index){
-      return obj.firstName + ' ' + obj.lastName + " " + index;
+    function(obj){
+      return ;
     }
   )
 }
 Array.prototype.getUsersFullNames = getUsersFullNames;
 
+var aaa = getUsersFullNames(usersArr);
 
 // Mapped array of users - to get the fullname
 var users = usersArr.getUsersFullNames();
@@ -59,3 +60,6 @@ var oldUsers = usersArr.filter(function(obj){
 
 
 console.log({oldUsers});
+//['Fasih Naqvi', 'Iqrar Raza']
+
+
