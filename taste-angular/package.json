@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/razazaidisd/JStraining/issues"
   },
-  "homepage": "https://github.com/razazaidisd/JStraining#readme"
+  "homepage": "https://github.com/razazaidisd/JStraining#readme",
+  "dependencies": {
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.3",
+    "bootstrap-css-only": "^3.3.7"
+  }
 }
