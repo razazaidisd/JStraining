@@ -2,8 +2,18 @@
 <html>
 <head>
 	<title>Taste Angular JS </title>
+	<link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">	
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap-css-only/css/bootstrap.css">	
 </head>
 <body ng-app="taste-angular">
+	<div>
+		<li><a ui-sref="home">Home</a></li>
+		<li><a ui-sref="about">About</a></li>
+	</div>
+ 	<ui-view></ui-view>
+
+
+
 	<h1> Angular JS - First Bite</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta labore, nostrum cumque, molestiae aliquid asperiores. Provident nostrum temporibus illo natus excepturi. Illo id, omnis suscipit laborum, ex nobis repellat error.</p>
 
@@ -14,16 +24,47 @@
 			</li>
 		</ul>
 
+		<button type="button" ng-click="vm.printMyName('Adill')">Printt Name</button>
+		{{(vm.name)? vm.name : 'No Name available!'}}
+
+		 <!-- Simple dropdown -->
+	    <div class="btn-group" uib-dropdown>
+	    	{{vm.status.isopen}}
+	      <button 
+		      id="single-button" 
+		      type="button" 
+		      class="btn btn-primary"
+		      uib-dropdown-toggle 
+		      ng-click="vm.toggleDropdown()"
+		    >
+	        Button dropdown <span class="caret"></span>
+	      </button>
+	      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+	        <li ng-repeat="option in vm.options">
+	        	<a href="javascript:;">
+	        		{{option}}
+	        	</a>
+	        </li>
+	      </ul>
+	    </div>
+
 	</div>
 
 </body>
 	<!--Vendor Scripts start-->
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+	<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+	<script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
 	<!--Vendor Scripts end-->
 
 	<!--App Scripts-->
 	<script type="text/javascript" src="app.module.js"></script>
+	<script type="text/javascript" src="app.route.js"></script>
 	<script type="text/javascript" src="app.controller.js"></script>
+	<script type="text/javascript" src="app/modules/home/home.controller.js"></script>
+	<script type="text/javascript" src="app/modules/about/about.controller.js"></script>
 	
 	<!--App Scripts end-->
 

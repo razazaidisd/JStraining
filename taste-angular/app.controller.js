@@ -8,7 +8,14 @@
 	/** @ngInject */
 	function AppController(){
 		var vm = this;
+		vm.name = null;
+		
 
+		function printMyName(name){
+			vm.name = name;
+		}
+
+		// User Array 
 		vm.users = [
 			  {
 					firstName: 'Fasih',
@@ -40,7 +47,28 @@
 			    lastName: 'Raza',
 			    age: 68
 			  }
-			];
+		];
+
+ 		/* Dropdown */
+ 		vm.options = ['opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6'];
+
+
+ 		/* Dropdown End*/
+		vm.status = {
+	    isopen: false
+	  };
+ 		function toggleDropdown() {
+	    vm.status.isopen = !vm.status.isopen;
+	  }
+
+
+
+
+
+		// Expose functions
+		vm.printMyName = printMyName;
+		vm.toggleDropdown = toggleDropdown;
+
 	}
 
 })();
