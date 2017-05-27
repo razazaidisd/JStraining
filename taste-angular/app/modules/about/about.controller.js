@@ -6,9 +6,11 @@
 		.controller('AboutController', AboutController);
 
 	/** @ngInject */
-	function AboutController(){
+	function AboutController(UserService){
 		var vm = this;
-		console.log('About controller');
+		vm.UserService = UserService;
+		vm.username = vm.UserService.user.name;
+
 	}
 
 })();
