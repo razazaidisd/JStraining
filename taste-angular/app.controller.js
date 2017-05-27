@@ -6,11 +6,13 @@
 		.controller('AppController', AppController);
 
 	/** @ngInject */
-	function AppController(){
+	function AppController(HomeService, UserService){
 		var vm = this;
 		vm.name = null;
-		
+		vm.HomeService = HomeService;
+		vm.UserService = UserService;
 
+		
 		function printMyName(name){
 			vm.name = name;
 		}
@@ -55,8 +57,8 @@
 
  		/* Dropdown End*/
 		vm.status = {
-	    isopen: false
-	  };
+		    isopen: false
+		  };
  		function toggleDropdown() {
 	    vm.status.isopen = !vm.status.isopen;
 	  }

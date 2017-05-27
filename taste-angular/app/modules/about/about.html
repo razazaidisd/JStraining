@@ -1,3 +1,19 @@
 <div>
-	<h1>About Page</h1>
+	<h1>Profile Page - About</h1>
+	<h2>{{vm.HomeService.serviceTitle}}</h2>
+	
+
+	<div class="user-detail">
+		<h3>{{vm.UserService.user.name}}</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique repellendus voluptas eos quasi. Eligendi unde, exercitationem quod aspernatur veritatis sunt blanditiis fuga consequuntur vel itaque ut, recusandae necessitatibus cupiditate laborum.</p>
+	</div>
+
+	<div class="form-group">
+	    <label >Username</label>
+	    <input type="text"  ng-model="vm.username" class="form-control" placeholder="Username">
+	</div>
+
+	<button ng-click="vm.UserService.updateUsername(vm.username)" class="btn btn-primary"> 
+		Update Username 
+	</button>
 </div>

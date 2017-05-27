@@ -1,0 +1,26 @@
+$color-primary: blue;
+@mixin float-margin-padding() {
+  float:left;
+  margin:10px;
+  padding:0;
+}
+
+.block{
+  .heading{
+    font-color: $color-primary;
+  }
+  .content{
+    background: $color-primary;
+  }
+  .footer{
+    background: $color-primary;
+  }
+}
+
+.box {
+  @include float-margin-padding();
+}
+.box2 {
+  @include float-margin-padding();
+  color:blue;
+}
