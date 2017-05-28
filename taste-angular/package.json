@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/razazaidisd/JStraining#readme",
   "dependencies": {
+    "angular": "^1.6.4",
     "angular-ui-bootstrap": "^2.5.0",
     "angular-ui-router": "^1.0.3",
     "bootstrap-css-only": "^3.3.7"

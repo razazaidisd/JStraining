@@ -26,7 +26,6 @@
 
 
 			function updateUsername(username){
-				console.log(username)
 				user.name = username;
 			}
 

@@ -10,7 +10,10 @@
 		var vm = this;
 		vm.UserService = UserService;
 		vm.username = vm.UserService.user.name;
-
+		vm.user = {
+			name: 'ADIL about',
+			email: 'adil@ajeeb.com'
+		}
 	}
 
 })();
