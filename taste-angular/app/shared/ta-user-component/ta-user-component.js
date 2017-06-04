@@ -9,14 +9,19 @@
       },
       controller: UserComponentCtrl,
       controllerAs: 'vm',
-      template: '<div>User Component <br />{{vm.user.name}} <br /> {{vm.user.email}}</div>'
+      templateUrl: 'app/shared/ta-user-component/ta-user-component.html'
     });
 
 
 		function UserComponentCtrl() {
 			var vm = this;
 
+      // User List functions 
+      function changeFriendType(){
+        vm.user.isAdded = !vm.user.isAdded;
+      }
 
+      vm.changeFriendType = changeFriendType;
 		}
 
 

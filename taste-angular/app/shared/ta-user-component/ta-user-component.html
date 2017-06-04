@@ -1,3 +1,28 @@
-<div>
-	testing component
+<div class="panel panel-default">
+  <div class="panel-heading">User Card</div>
+  <div class="panel-body">
+    <h4>{{vm.user.firstName}} {{vm.user.lastName}}</h4>
+    <p>{{vm.user.email}}</p>
+
+
+	<pre>{{vm.user}}</pre>
+  </div>
+  <div class="panel-footer">
+    <div class="action text-right">
+    	<button 
+			class="btn btn-primary" 
+			ng-click="vm.changeFriendType()"
+			ng-if="!vm.user.isAdded"
+			>
+    		Add as friend
+    	</button>
+    	<button 
+			class="btn btn-danger" 
+			ng-click="vm.changeFriendType()"
+			ng-if="vm.user.isAdded"
+			>
+    		Remove as friend
+    	</button>
+    </div>
+  </div>
 </div>
